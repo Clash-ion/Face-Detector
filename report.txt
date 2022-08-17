@@ -1,0 +1,47 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: detect_and_align.py
+--------------------------------------------------------------------------------
+detect_and_align.py:223:30: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+detect_and_align.py:257:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'detect_and_align.py'
+ outputting to 'detect_and_align2.py'
+--------------------------------------------------------------------------------
+
+220:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+223:30: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+223:30: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+257:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+257:15: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+275:19: INFO: Added keywords to args of function 'tf.nn.conv2d'
+275:19: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+277:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+292:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+301:15: INFO: Added keywords to args of function 'tf.nn.max_pool'
+301:15: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+301:15: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+305:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+317:17: INFO: Renamed 'tf.nn.relu_layer' to 'tf.compat.v1.nn.relu_layer'
+317:47: INFO: Renamed 'tf.nn.xw_plus_b' to 'tf.compat.v1.nn.xw_plus_b'
+323:19: INFO: Added keywords to args of function 'tf.reduce_max'
+323:47: INFO: Renamed keyword argument for tf.reduce_max from keep_dims to keepdims
+325:20: INFO: Added keywords to args of function 'tf.reduce_sum'
+325:52: INFO: Renamed keyword argument for tf.reduce_sum from keep_dims to keepdims
+326:18: INFO: Renamed 'tf.div' to 'tf.compat.v1.div'
+399:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+400:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+403:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+404:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+407:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+408:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+--------------------------------------------------------------------------------
+
